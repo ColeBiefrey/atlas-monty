@@ -33,6 +33,7 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
+
 typedef struct instruction_s
 {
     char* opcode;
@@ -45,10 +46,20 @@ void start_vglo(FILE *fd);
 
 void free_vglo(void);
 
+void (*get_opcodes(char* opc))(stack_t** stack, unsigned int line_number);
+
 void _push(stack_t **doubly, unsigned int cline);
 void _pall(stack_t **doubly, unsigned int cline);
 void _pint(stack_t **doubly, unsigned int cline);
 void _pop(stack_t **doubly, unsigned int cline);
 void _swap(stack_t **doubly, unsigned int cline);
+
+void free_dlistint(stack_t *head);
+stack_t *add_dnodeint(stack_t **head, const int n);
+stack_t *add_dnodeint_end(stack_t **head, const int n);
+
+char *_strtoky(char *s, char *d);
+int _sch(char *s, char c);
+int _strcmp(char *s1, char *s2);
 
 #endif
