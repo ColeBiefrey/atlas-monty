@@ -87,4 +87,7 @@ char *_strtoky(char *s, char *d);
 int _sch(char *s, char c);
 int _strcmp(char *s1, char *s2);
 
+void _nop(stack_t **doubly, unsigned int cline);
+void _add(stack_t **doubly, unsigned int cline);
+
 #endif
