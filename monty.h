@@ -40,6 +40,31 @@ typedef struct instruction_s
     void (*f)(stack_t** stack, unsigned int line_number);
 } instruction_t;
 
+/**
+* struct globals - global struct to use in functions
+* @lifo: stack/queue
+* @cont: current line
+* @arg: second parameter inside current line
+* @head: doubly linked list
+* @fd: file descriptor
+* @buffer: input text
+* Description: doubly linked list node struct for
+* stack, queues, LIFO, FIFO
+*/
+
+typedef struct globals
+{
+    int lifo;
+    unsigned int cont;
+    char *arg;
+    stack_t *head;
+    FILE *fd;
+    char *buffer;
+} global_t;
+
+extern global_t vglo;
+
+
 int main(int argc, char *argv[]);
 FILE *check_input(int argc, char *argv[]);
 void start_vglo(FILE *fd);
