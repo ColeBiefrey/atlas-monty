@@ -39,14 +39,16 @@ typedef struct instruction_s
     void (*f)(stack_t** stack, unsigned int line_number);
 } instruction_t;
 
+int main(int argc, char *argv[]);
+FILE *check_input(int argc, char *argv[]);
+void start_vglo(FILE *fd);
 
-int main(int argc, char* argv[]);
-FILE* check_input(int argc, char* argv[]);
-void start_vglo(FILE* fd);
 void free_vglo(void);
 
-void _push(stack_t** doubly, unsigned int cline);
-void _pall(stack_t** doubly, unsigned int cline);
-void _pint(stack_t** doubly, unsigned int cline);
-void _pop(stack_t** doubly, unsigned int cline);
-void _swap(stack_t** doubly, unsigned int cline);
+void _push(stack_t **doubly, unsigned int cline);
+void _pall(stack_t **doubly, unsigned int cline);
+void _pint(stack_t **doubly, unsigned int cline);
+void _pop(stack_t **doubly, unsigned int cline);
+void _swap(stack_t **doubly, unsigned int cline);
+
+#endif
