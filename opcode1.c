@@ -90,7 +90,7 @@ void _pint(stack_t **doubly, unsigned int cline)
 
 void _pop(stack_t **doubly, unsigned int cline)
 {
-	stack_t* aux;
+	stack_t *aux;
 
 	if (doubly == NULL || *doubly == NULL)
 	{
@@ -110,7 +110,7 @@ void _pop(stack_t **doubly, unsigned int cline)
  * Return: no return
  */
 
-void _swap(stack_t** doubly, unsigned int cline)
+void _swap(stack_t **doubly, unsigned int cline)
 {
 	int m = 0;
 	stack_t *aux = NULL;
